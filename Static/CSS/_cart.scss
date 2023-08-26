@@ -1,0 +1,334 @@
+@import 'header_footer';
+
+
+.productHeader {
+    @include font-shared;
+    @include flex-shared;
+    background-color: $backgroundColor;
+    font-size: 24px;
+    font-weight: 400;
+    min-height: 148px;
+    justify-content: space-between;
+    flex-wrap: wrap;
+
+
+    &__title {
+        @include font-shared;
+        color: $markTextColor;
+        font-size: 24px;
+        font-weight: 400;
+        }
+
+}
+
+.cart_section {
+    display: flex;  
+    // gap: 128px;
+    margin-top: 96px;
+    margin-bottom: 128px;
+    justify-content: space-between;
+    // flex-wrap: wrap;
+}
+
+.cart {
+    display: flex;
+    box-shadow: 17px 19px 24px rgba(0, 0, 0, 0.13);
+    margin-bottom: 40px;
+
+
+    &_extra-margin {
+        margin-bottom: 72px;
+    }
+
+    &__desc {
+        padding: 22px 22px 0 31px;
+        display: flex;
+        gap: 57px;
+    }
+
+    &__content {
+        width: 262px;
+    }
+
+    &__title, a {
+        @include font-shared;
+            color: #222;
+            font-size: 24px;
+            font-weight: 400;
+            margin-bottom: 42px;
+            text-decoration: none;
+            padding: 0;
+            }
+
+    &__text {
+        @include font-shared;
+        color: #575757;
+        font-size: 22px;
+        font-weight: 400;
+        margin-bottom: 6px;
+    }
+        
+    &__mark {
+        color:#EF5B70;
+    }
+
+    &__quantity {
+        @include font-shared;
+        padding: 1px 16px;
+        border: 1px solid #EAEAEA;
+        margin-left: 24px;
+        max-width: 44px;
+        color: #656565;
+        font-size: 18px;
+        font-weight: 400;
+    }
+
+    input::-webkit-outer-spin-button,
+    input::-webkit-inner-spin-button 
+    
+    {
+      -webkit-appearance: none;
+      margin: 0;
+    }
+
+}
+
+.cart-button {
+    display: flex;
+    justify-content: space-between;
+    
+    &__button {
+    @include font-shared;
+    color: #000;
+    font-size: 14px;
+    font-weight: 300;
+    padding: 16px 40px;
+    border: 1px solid #A4A4A4;
+    background-color: #FFFFFF;
+    }
+
+    &__button:hover {
+        background-color: $markTextColor;
+        color: #FFF;
+        border: 1px solid transparent;    
+        transition: .2s;
+    }   
+}
+
+
+.shipping-data {
+max-width: 360px;
+margin-bottom: 57px;
+   
+    &__title {
+        @include font-shared;
+        margin-top: 17px;
+        color: #222;
+        font-size: 16px;
+        font-weight: 300;
+       }
+    
+    &__input {
+        @include font-shared;
+        display: block;
+        padding: 12px 0 16px 17px;
+        width: 100%;
+        color: #B1B1B1;
+        font-size: 13px;
+        font-weight: 300;
+        margin-top: 20px;
+        border: 1px solid #A4A4A4
+    }
+    
+    &__button {
+        @include font-shared;
+        margin-top: 24px;
+        padding: 12px 14px;
+        width: auto;
+        color: #4A4A4A;
+        font-size: 11px;
+        font-weight: 300;
+        background-color: #fff;
+        border: 1px solid #A4A4A4
+    }
+
+    &__button:hover {
+        background-color: $markTextColor;
+        color: #FFF;
+        border: 1px solid transparent;
+        transition: .2s;      
+    }    
+
+}
+
+.order {
+    max-width: 360px;
+    background-color: #F5F3F3;
+    padding: 39px 41px 42px 41px;
+
+    &__subtotal {
+        @include font-shared;
+        color: #4A4A4A;
+        font-size: 11px;
+        font-weight: 400;
+        margin-bottom: 12px;
+        text-align: right;
+    }
+
+    &__total {
+        @include font-shared;
+        color: #222;
+        font-size: 16px;
+        font-weight: 300;
+        margin-bottom: 21px;
+        text-align: right;
+    }
+
+    &__line {
+        max-width: 275px;
+        border: 1px solid #E2E2E2;
+        margin-bottom: 17px;
+    }
+
+    &__subtotal_mark {
+        color:$markColor;
+        padding-left: 20px;
+    }
+
+    &__button {
+        @include font-shared;
+        color: #FFF;
+        font-size: 16px;
+        font-weight: 300;
+        background-color: $markColor;
+        padding: 16px 36px;
+        border: 1px solid $markColor; 
+        line-height: 19.2px;   
+    }
+
+    &__button:hover {  
+        background-color: #c23b4d;
+        border: 1px solid transparent;
+        transition: .2s;    
+    }    
+
+}
+
+
+@media (max-width:1024px) {
+
+    .cart__closure svg {
+        margin-top: 8px;
+    }
+
+    .cart__main {
+        margin-bottom: 48px;
+        }
+
+    .cart_section {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .cart-form {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 15px;
+        max-width: 652px;
+    }
+
+    .cart-button {
+        display: flex;
+        justify-content: center;
+        gap: 48px;
+    }
+
+
+    .shipping-data {
+        &__title {
+            margin-top: -0;
+        }
+    }
+
+    .order {
+        margin-top: 39px;
+    }
+
+}
+
+@media (max-width:767px) {
+
+
+
+    .cart-button {
+        display: flex;
+        justify-content: center;
+        gap: 9px;
+    }
+
+    .cart_section {
+        margin-bottom: 96px;
+        flex-direction: column;
+        align-content: center;
+    }
+
+
+    .cart-form {
+        display: block;
+    }
+
+    .shipping-data {
+        margin-bottom: 48px;
+    }
+
+    .cart {
+
+        &__content {
+            width: auto;
+        }
+
+            &__title {
+                margin-bottom: 26px;
+            }
+            &__title a, &__text {
+                font-size: 16px;
+                margin-bottom: 0;
+            }
+        
+            &__quantity {
+                font-size: 10px;
+                padding: 1px 9px;
+                margin-left: 14px;
+                max-width: 28px;
+             }
+
+            &__desc {
+                padding: 0 12px 0 17px;
+                gap:45px;
+            }
+
+        &__closure svg {
+            margin-top: 15px;
+            width: 9px;
+            height: 9px;
+        }
+
+        &__image {
+            height: 188px;
+            width: 144px;
+        }
+        
+    }
+
+    .cart-button {
+    
+        &__button {
+            font-size: 12px;
+            padding: 9px 18px;
+            border: 1px solid #A4A4A4;
+            background-color: #FFFFFF;
+        }
+    }
+}
+
+

@@ -1,0 +1,165 @@
+@import 'header_footer';
+
+
+.productHeader {
+    @include font-shared;
+    @include flex-shared;
+    background-color: $backgroundColor;
+    font-size: 24px;
+    font-weight: 400;
+    min-height: 148px;
+    justify-content: space-between;
+    flex-wrap: wrap;
+
+
+    &__title {
+        @include font-shared;
+        color: $markTextColor;
+        font-size: 24px;
+        font-weight: 400;
+        }
+
+}
+
+.registration {
+    display: flex;
+    gap: 128px;
+    padding-top: 64px;
+    padding-bottom: 96px;
+}
+
+.reg-form {
+    max-width: 360px;
+
+    &__title {
+        @include font-shared;        
+        color: $headingFormColor;
+        font-size: 16px;
+        font-weight: 300;
+        padding-bottom: 20px;
+    }
+
+    &__comments {
+        @include font-shared;
+        color: $textFormColor;
+        font-size: 13px;
+        font-weight: 300;
+        margin: 16px 0 39px;
+    }
+
+    &__input::placeholder {
+        @include font-shared;
+        color: $textFormColor;
+        font-size: 13px;
+        font-weight: 300;
+    }
+
+    &_margin-change {
+        margin-bottom: 0;
+    }
+
+    &_block {
+        display: block;
+        padding: 12px 0 16px 17px;
+        width: 100%;
+        margin-bottom: 30px;
+    }
+
+    &__radio {
+        display: flex;
+        align-items: center;
+        margin: 31px 0 33px;
+    }
+
+    &__lable { 
+        @include font-shared;
+        color: $textColor;
+        font-size: 11px;
+        font-weight: 300;
+        margin-left: 10px;
+        margin-right: 20px;
+    }
+
+    &__button {
+        @include font-shared;
+        color: $buttonColor;
+        font-size: 14px;
+        font-weight: 400;
+        background-color: $markColor;
+        padding: 16px 29px;
+        border: 1px solid $markColor;
+        }
+
+    &__button:hover {  
+        background-color: #c23b4d;
+        border: 1px solid transparent;
+        transition: .2s;    
+    }    
+
+    &__button-gap {
+        margin-right: 20px;
+    }
+
+}
+
+.loyality {
+    max-width: 652px;
+
+    &__text, &__item, &__title
+    {
+        @include font-shared;
+        color: $textColor;
+        font-size: 24px;
+        font-weight: 300;
+    }
+
+    &__text {   
+        margin: 22px 0 21px;
+    }
+
+    &__list {
+        margin-left: 24px;
+    }
+
+    &__item {
+        list-style-image: url(../../img/imgRegistration/tick.svg);
+        padding-left: 10px;
+           }
+
+    &__item:not(:last-child) {
+        padding-bottom: 16px;
+    }
+}
+
+
+@media (max-width:1024px) {
+
+    .registration {
+        justify-content: space-between;
+        gap: 22px;
+    }
+
+    .loyality {
+        max-width: 354px;
+
+        &__text, &__item, &__title {
+            font-size: 16px;
+
+        }
+    }
+}
+
+@media (max-width:767px) {
+
+    .registration {
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    .reg-form {
+        margin-bottom: 40px;
+    }
+
+
+}
+

@@ -1,0 +1,21 @@
+$backgroundColor: #F8F3F4;
+$markTextColor:#F16D7F;
+$widthProductDesc:1141px;
+// Cart:
+$markColor:#F16D7F;
+// Registration:
+$textColor: #000;
+$textFormColor: #B1B1B1;
+$headingFormColor:#222222;
+$buttonColor: #FFF;
+
+@mixin font-shared() {
+    font-style: normal;
+    line-height: normal;
+}
+
+@mixin flex-shared() {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
